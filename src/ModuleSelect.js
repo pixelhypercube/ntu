@@ -30,7 +30,7 @@ export default class ModuleSelect extends React.Component {
                         <ModuleButton
                         bgColor={bgColor}
                         onClick={()=>{
-                            window.location.href = `/ntu/${moduleCode}`;
+                            window.location.href = `/#/${moduleCode}`;
                         }}
                         moduleCode={moduleCode}
                         moduleDesc={moduleName}

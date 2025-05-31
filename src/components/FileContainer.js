@@ -19,7 +19,8 @@ export default class FileContainer extends React.Component {
                     flexDirection:"column"
                 }} xs={10}>
                     <h5>{fileName}</h5>
-                    <div>{desc}</div>
+                    <div style={{textAlign:"left"}}>{desc}</div>
+                    <hr style={{width:"100%"}}></hr>
                     <h6>Tags</h6>
                     <div className="d-flex">
                         {tags ? tags.map(tag=>{

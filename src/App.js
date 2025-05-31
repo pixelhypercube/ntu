@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   // Navigate,
@@ -24,14 +24,15 @@ export default function App() {
       <Router>
         <Routes>
           <Route
-            path="/ntu/"
+            path="/"
             element={<ModuleSelect/>}
           />
           {
             modulesList.map(moduleCode=>{
               return (
                 <Route
-                path={"/ntu/"+moduleCode}
+                key={moduleCode}
+                path={moduleCode}
                 element={<FileSelect/>}
                 />
               )
@@ -42,8 +43,8 @@ export default function App() {
               const {pathName,fileName,tags,desc,moduleCode,innerHTML} = file;
               return (
                 <Route
-                path={"/ntu/FileViewer"+pathName}
-                element={<FileViewerComponent 
+                  path={"/FileViewer" + pathName}
+                  element={<FileViewerComponent 
                   moduleCode={moduleCode}
                   desc={desc} 
                   tags={tags}

@@ -17,7 +17,6 @@ export default class FileViewerComponent extends React.Component {
     };
 
     renderFile = (filePath, ext, innerHTML) => {
-        console.log(innerHTML)
         switch (ext) {
             case 'pdf':
                 return (
@@ -26,7 +25,7 @@ export default class FileViewerComponent extends React.Component {
                         width:"80%",
                         minHeight:"800px"
                     }}
-                    src={filePath.split("/FileViewer")[0]}></embed>
+                    src={"/ntu"+filePath}></embed>
                 );
             // case 'docx':
             //     return <DocxViewer filePath={filePath} />;
@@ -42,14 +41,14 @@ export default class FileViewerComponent extends React.Component {
             //         />
             //     );
             case 'csv':
-                return <AnkiCSVViewer filePath={filePath} />
+                return <AnkiCSVViewer filePath={"/ntu"+filePath} />
             case 'mp4':
-                return <video src={filePath} controls width="100%" />;
+                return <video src={"/ntu"+filePath} controls width="100%" />;
             case 'jpg':
             case 'png':
-                return <img src={filePath} alt="Preview" style={{ maxWidth: '100%' }} />;
+                return <img src={"/ntu"+filePath} alt="Preview" style={{ maxWidth: '100%' }} />;
             case "apkg":
-                return <AnkiViewer filePath={filePath} />
+                return <AnkiViewer filePath={"/ntu"+filePath} />
             default:
                 if (innerHTML) {
                     return (
