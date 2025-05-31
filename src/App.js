@@ -24,14 +24,14 @@ export default function App() {
       <Router>
         <Routes>
           <Route
-            path="/"
+            path="/ntu/"
             element={<ModuleSelect/>}
           />
           {
             modulesList.map(moduleCode=>{
               return (
                 <Route
-                path={"/"+moduleCode}
+                path={"/ntu/"+moduleCode}
                 element={<FileSelect/>}
                 />
               )
@@ -42,7 +42,7 @@ export default function App() {
               const {pathName,fileName,tags,desc,moduleCode,innerHTML} = file;
               return (
                 <Route
-                path={"/FileViewer"+pathName}
+                path={"/ntu/FileViewer"+pathName}
                 element={<FileViewerComponent 
                   moduleCode={moduleCode}
                   desc={desc} 
