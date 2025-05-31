@@ -1,0 +1,117 @@
+Front	Back
+ℕ ℤ ℚ ℝ and ℂ	ℕ = natural numbers (1,2,3,...) sometimes EXCLUDING 0<br>ℤ = integers =(...,-2,-1,0,1,2,...)<br>ℚ = rational numbers =&gt; a/b, a ∈ ℤ, b ∈ ℤ<br>ℝ = real numbers<br>ℂ = complex numbers
+Euclidean Devision	m = qn + r<br>q = quotient, r = remainder
+Modulo	a ≡ b(mod n)
+Operator Closure	Consider a set S with an operator ∆ (can be *, -, +, /)<br>S is closed under ∆ if the result of the operation ∆ on any two elements IN S results in an element of S
+Proposition	Declarative statement that is either true or false<br>e.g. 1 + 1 - &gt; true, 1 + 1 &gt; 3 - false
+Paradox	Declarative statement that cannot be assigned a truth value<br>i.e. not a proposition
+Contradiction	Compound proposition that ALWAYS gives a false value<br>p∧(￢p) ≡ F<br>E.g. &quot;This course is easy and this course is not easy&quot;
+Tautology	Compound proposition that ALWAYS gives a true value<br>p∨(￢p) ≡ T
+F -&gt; T or F-&gt;F	Implication is VACUOUSLY TRUE
+COMMUTATIVE	p∧q ≡ q∧p<br>p∨q ≡ q∨p
+IDEMPOTENT	p∧p ≡ p<br>p∨p ≡ p
+ASSOCIATIVITY	p∧(p∧r) ≡ (p∧q)∧r
+Converse	p -&gt; q ≡ q -&gt; p
+Inverse	p -&gt; q ≡ ￢p -&gt; ￢q
+Operator Precedence (Highest to Lowest)	() Brackets<br>￢Negation (NOT)<br>∧∨ Disjunction (OR) &amp; Conjunction (AND)<br>→  Conditional (If then)<br>↔Biconditional (if and only if)
+Leftmost Precedence	Applicable to equal priority
+Rightmost Precedence	Applicable to NOT operators not separated by (), rightmost has precedence
+Valid Argument	Conclusion is TRUE if the premises ARE ALL TRUE
+Modus Ponens (Method of Affirming)	p→ q;<br>p;<br>∴q
+Modus Tollens (Method of Denying)	p→ q;<br>￢q;<br>∴￢p
+Conjunctive Simplification (Particularising)	p∧q;<br>∴p<br><br>OR<br><br>p∧￢q;<br>∴￢q
+Conjunctive Addition (Specializing)	p;q;<br>∴p∧q
+Disjuctive Addition (Generalisation)	p;<br>∴p∨q
+Disjuctinve Syllogism (Case Elimination)	p∨q;<br>￢p;<br>∴q
+Rule of Contradiction	￢p→ C;<br>∴p
+Alternate Rule of Contradiction	￢p→ F;<br>∴p
+Dilemma	p∨q;<br>p→ r;<br>q→ r;<br>∴r
+Hypothetical Syllogism	p→ q; -- If I do not wake up, then i cannot go to work<br>q→ r; -- If I cannot go to work, then I will not get paid<br>∴p→ r -- Therefore, if I do not wake up, then I will not get paid
+What is a limitation of using exhaustion to determine truth values?	The domain may be too large to exhaustively check every case.
+How do you prove an existential quantification is true?	Find a single positive example.
+How do you disprove a universal quantification?	Find a single counterexample.
+Can a positive example prove a universal quantification?	No, it cannot.
+Can a counterexample disprove an existential quantification?	No, it cannot.
+What is existential instantiation?	Replacing an existential statement with a specific example known to exist.
+What is existential generalization?	Inferring an existential statement from a specific case.
+What is universal instantiation?	Applying a universal statement to a specific case.
+What is universal generalization?	Concluding a universal statement from multiple verified instances (with restrictions).
+Filling r SLOTS with n CHOICES<br>- CAN BE REPEATED	n^r choices
+Filling r SLOTS with n CHOICES<br>- CANNOT BE REPEATED	n * (n-1) * (n-2) ... (n-r+1) choices<br>= C(n,r)
+Filling n slots with r choices where n=r:	n! 
+Filling n slots with r choices, where n!=r:	n! / (n-r)!<br>Denoted by:<br>P(n,r)
+Distinguishable Permutations	Number of distinguishable permutations from a collection of objects, where first object appears k1 times, the second object k2 times,... for r distinct objects:<br><br>n!/(k1!k2!....kr!)
+Recurrence Relations - Backtracking	an= an-1+ 3<br>= (an-2+ 3) + 3 (Sub value of an-1)<br>= (an-3+ 3) + 3 + 3 (Sub value of an-2)<br>…<br>= a1+ (n-1)3
+Explicit Set	Set which is enumerated e.g. A = {1,2,3}
+Implicit Set	Set described using predicates = e.g. A = {x | x is a prime number}
+Membership (∈)	x∈S &lt;=&gt; x is an element of S
+Subset (⊆ )	A⊆B iff every element in A is in B
+Empty Set (∅)	Set with no elements in it {}
+Set Equality	A = B &lt;=&gt; A has the same elements in B and vice versa
+Cardinality	Number of element in a set S (CAN BE INIFINITE), |∅| = 0
+Power Set (P(S))	Set of all subsets of S {A | A ⊆ S}
+Partition	Collection of nonempty sets where all the sets are mutually disjoint (no overlapping values)
+Identity Laws (Set Theory)	A U ∅ = A<br>A ∩ U = A
+Domination Laws (Set Theory)	A U U = U<br>A ∩ ∅ = ∅
+Idempotent Laws (Set Theory)	A U A = A<br>A ∩ A = A
+Double COMPLEMENT (Set Theory)	"A&#x27;&#x27; = A"
+Commutative Laws (Set Theory)	A U B = B U A<br>A ∩ B = B ∩ A
+Associative Laws (Set Theory)	A U (B U C) = (A U B) U C<br>A ∩ (B ∩ C) = (A ∩ B) ∩C
+Distributive Laws (Set Theory)	A U (B U C) = (A U B) ∩ (A U C)<br>A ∩ (B ∩ C) = (A ∩ B) U (A ∩ C)
+Absorption Laws (Set Theory)	A U (A ∩ B) = A<br>A ∩ (A U B) = A
+ALTERNATIVE REPRESENTATION for SET DIFFERENCE (Set Theory)	"A - B = A ∩ B&#x27;"
+One-To-One Function	Injective &lt;=&gt; f(x) =  f(y), implying x = y for all x and y in domain of f<br>Alternatively, ∀x ∈ X, ∀y ∈ X, (f(x) = f(y) → x = y)
+Onto Function	Surjective &lt;=&gt; f: X -&gt; Y for every element in Y, there is an element in X with f(x) = y<br>Alterntively, ∀y ∈ Y, ∃ x ∈ X s.t. f(x) = y
+Bijective Functions (One-to-one &amp; Onto)	"Function is ONE-TO-ONE CORRESPONDENCE (i.e. bijection) &lt;=&gt; it&#x27;s both one-to-one and onto<br><br>i.e. no element in co-domain of f has two or more preimages (one-to-one) and each element of fhas a preimage (onto)"
+Identity Function	A function from a set A to itself such that EVERY ELEMENT of the IMAGE is the same as the PREIMAGE
+Inverse function	The reverse of the function. i.e. passing the image through the inverse function will return the preimage
+Pigeonhole Principle	A function from one finite set to a smaller finite set cannot be one-to-one.<br>There must be at least two elements in the domain that have the same image in the co-domain<br>e.g. Bob has 8 children. There are only 7 days in a week. At least 2 of his children must be born on the same day of the week
+Countable Sets	Set that is finite or has same cardinality as the set of +ve integers is countable<br>Set that is not countable is uncountable
+Cantor Diagonalisation	1. Assume the opposite: Suppose all real numbers between 0 and 1 can be listed in a sequence (i.e., the set is countable)<br><br>2.Label them: Then each number would have a label like  R1, r2, r3,..., each with a decimal expansion:<br><br>r₁ = 0.d₁₁ d₁₂ d₁₃ d₁₄ ...<br>r₂ = 0.d₂₁ d₂₂ d₂₃ d₂₄ ...<br>r₃ = 0.d₃₁ d₃₂ d₃₃ d₃₄ ...<br>...
+Series	A sum of terms in a sequence<br>a1, a2, a3, a4 =&gt; S(n) = n SIGMA(ai) i=0<br>1 , -1, 1, -1, 1, -1 =&gt; ak = (-1)^k
+Arithmetic Sequence	0,1,2,3,4, ak=k<br>1,3,5,7,9 ak = 2k-1
+Geometric Sequence	1,1,1,1,... a = 1<br>1,-1,1,-1,1,-1,.... ak = (-1)^k<br>1,2,4,8,16,32,... ak = 2^k
+To find an	Arithmetic - a + (n-1)d<br>Geometric - ar^(n-1)
+To find sum	Arithmetic - 1/2 * (2a + (n-1)*d)<br>Geometric - (a*r^n - 1) / (r-1) <br>Keywords:<br>a - first term<br>d - difference<br>r - ratio<br><br>Ratio found by dividing 2 terms of geometric progression<br>Difference found by subtracting 2 terms of arithmetic progression
+Adjacent (Graph Theory)	Vertices u &amp; v are adjacent of G if {u,v} is an edge of G
+Incident (Graph Theory)	Edge e = {u,v} is an incident of G with vertices {u,v}
+Handshaking Theory	2e = Σ of degrees of G<br>e /= 2;
+Subgraph	● Vertices of subgraph is subset of parent graph<br>● Edges is subset of parent graph<br>**Note that edges must be incident to the vertices of the subset
+Simple Graph	● No loop (edges incident to 2 same vertices not represented)<br>● No parallel edges between any pair of vertices (Only 1 line between each pair)
+Multigraph	● No loop<br>● At least 2 parallel edges between some pair of vertices
+Directed Multigraph	● Edges are ordered, and have a direction<br>● Parallel edges &amp; loops represented
+Complete Graph	● Every vertex is adjacent to every other distinct vertex
+Bipartite Graph	● Vertices partitioned into 2 subsets (W and X)<br>● Each edge connects a w∈W and a x∈X
+Euler Path (Use Edge EXACTLY ONCE)	Walk on all edges of graph 
+Euler Circuit (Use Edge EXACTLY ONCE)	Walk on all edges of graph that START and END at SAME VERTEX
+Euler Path (REQUIREMENTS)	All nodes on graph G must have EVEN DEGREE
+Euler Circuit (REQUIREMENTS)	EVERY node has to be of an EVEN DEGREE
+Hamiltonian Path	Use vertex EXACTLY ONCE
+Hamiltonian Circuit (Use vertex EXACTLY ONCE)	Use vertex EXACTLY ONCE - EXCEPT THE STARTING VERTEX (goes back to the same vertex after traversing the last one)
+ISOMORPHIC GRAPHS	The same number of vertices<br>The same number of edges<br>The same degree sequence<br>The same overall shape or structure, even if drawn or labeled differently
+Number of edges on complete graphs	"\[ 
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2} \]"
+Handshaking Lemma:	∑deg(v)=2⋅number&nbsp;of&nbsp;edges
+Euler's Theorem	A connected graph has an Eulerian <strong>circuit</strong> ⇔ every vertex has even degree.<br>Has an Eulerian <strong>path</strong> ⇔ exactly 0 or 2 vertices have odd degree
+Hamiltonian Path/Circuit	Visits all vertices once (circuit returns to start). No simple criterion.
+Graph Isomorphism:	Bijection \(f:V_G→V_H \)<br>such that<br>\((u,v) ∈ E_G ⇔ (f(u), f(v)) ∈ E_H\)
+Total Number of relations on A:	\(2^{n^2}\)
+Reflexive relations	Each \((a,a)\) must be included ⇒ choose from remaining \(n^2 - n\) pairs
+Total Number of Reflexive Relations	\(2^{n^2−n}\)
+Symmetric Relations:	For each pair \((a,b)\) where \(a \neq b\), either both \((a,b) \) and \( (b,a)\) are included, or neither.<br>There are \(\binom{n}{2}\)&nbsp;such unordered pairs.
+Total number of Symmetric Relations	Total = \(2^{\binom{n}{2} + n} = 2^{\frac{n(n-1)}{2} + n}\)
+Antisymmetric relations:	For each \((a,b)\)&nbsp;with \(a \neq b\), either one of \((a,b)\), \((b,a)\), or neither can be included.<br>For each such pair: 3 choices.
+Total Number of Antisymmetric Relations	Total = \(2^n \cdot 3^{\binom{n}{2}}\)
+Transitive relations&nbsp; (Formula to calculate number):	No simple closed formula; counted via algorithms.
+Total functions from \(A \rightarrow B\)	\(n^m\)
+Total number of One-to-one (<b>injective</b>) functions (\(m \leq n\)):	"\(n \cdot (n-1) \cdot \ldots \cdot (n-m+1) = \frac{n!}{(n - m)!}\)&nbsp;or , P(n,m)​<br>
+<h3></h3>"
+Total Number of Onto (<b>Surjective</b>) Functions:	Counted using <strong>inclusion-exclusion</strong>:<br><ul><li>\(\sum_{k=0}^{n} (-1)^k \binom{n}{k} (n - k)^m\)</li></ul>
+Number of Bijective Functions (<b>m=n</b>)	\(n!\)
+Total number of simple graphs with n vertices	\(2^{\binom{n}{2}}\)
+Number of possible undirected edges between \(n\) labeled vertices	\(\binom{n}{2}\)
+Number of possible undirected edges betweeen n labeled vertices	\(\binom{n}{2}\)
+Number of directed graphs with \(n\)&nbsp;vertices:	\(2^{n(n-1)}\)&nbsp;(excluding self-loops)
+Number of directed graphs with self-loops allowed:	\(2^{n^2}\)
+Inclusion-Exclusion Principle	\(|A \cup B| = |A| + |B| - |A \cap B|\)&nbsp;or,<br><div><br></div><div>For finite sets A1,A2,…,AnA_1, A_2, \dots, A_nA1​,A2​,…,An​, the size of their union is:</div>\(\left| \bigcup_{i=1}^n A_i \right| = \sum_{i=1}^n |A_i| - \sum_{1 \le i &lt; j \le n} |A_i \cap A_j| + \sum_{1 \le i &lt; j &lt; k \le n} |A_i \cap A_j \cap A_k| - \cdots + (-1)^{n+1} |A_1 \cap A_2 \cap \cdots \cap A_n|\)<br>
+Pigeonhole Principle:	If \((n+1)\)&nbsp;objects are placed into \(n\)&nbsp;boxes, one box contains at least 2 objects.

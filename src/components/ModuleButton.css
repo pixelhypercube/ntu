@@ -1,0 +1,16 @@
+.module-btn {
+    padding:20px;
+    border-radius:20px;
+    /* border:2px solid black; */
+    min-height:150px;
+    box-shadow:0px 0px 5px #aaaaaa;
+    transition-duration:0.1s;
+}
+
+.module-btn:hover {
+    filter:brightness(0.8)
+}
+
+.module-btn:active {
+    filter:brightness(1.1)
+}

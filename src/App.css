@@ -1,0 +1,15 @@
+
+@font-face {
+  font-family: Rubik;
+  src: url("./fonts/Rubik.ttf");
+}
+
+* {
+  text-align:center;
+  font-family: Rubik;
+}
+
+header {
+  padding:1%;
+  background:#CCCCCC;
+}

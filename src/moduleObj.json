@@ -1,0 +1,99 @@
+{
+    "CC0005": {
+        "moduleName":"Healthy Living & Wellbeing",
+        "desc":"An inter-disciplinary course focused on what it means to live a healthy and fulfilling life. It equips students with practical knowledge and skills to maintain physical and mental health, while promoting self-care, resilience, and wellbeing. Emphasis is placed on collaboration across disciplines, and understanding the link between mental and physical health.",
+        "grade":"A",
+        "semester":1,
+        "year":2024,
+        "bgColor":"#FFCCCC",
+        "files":[
+            {
+                "moduleCode":"CC0005",
+                "fileName":"Presentation - Figma Prototype",
+                "desc":"Supporting Figma prototype for 2nd Presentation (Healthy Living Portion) - RActive",
+                "pathName":"/files/CC0005/CC0005_App.fig",
+                "innerHTML":"<iframe style=\"border: 1px solid rgba(0, 0, 0, 0.1);\" width=\"800\" height=\"600\" src=\"https://embed.figma.com/design/hiWbnOFAR7KPcpiU9cQMwe/CC0005-App?node-id=0-1&embed-host=share\" allowfullscreen></iframe>",
+                "tags":["Figma"]
+            },
+            {
+                "moduleCode":"CC0005",
+                "fileName":"Final Assignment",
+                "desc":"",
+                "pathName":"/files/CC0005/CC0005_Individual_Assignment_Teo_Kai_Jie.pdf",
+                "tags":["Assignments"]
+            }
+        ]
+    },
+    "CC0001": {
+        "moduleName":"Inquiry and Communication in an Interdisciplinary World",
+        "desc":"A foundational inter-disciplinary communication course aimed at improving critical thinking, writing, and oral communication. It encourages idea discovery through writing, and teaches students how to analyze texts, revise effectively, and communicate with clarity and purpose—skills applicable across all disciplines.",
+        "semester":2,
+        "year":2024,
+        "grade":"A",
+        "bgColor":"#FFFFCC",
+        "files":[
+            {
+                "moduleCode":"CC0001",
+                "fileName":"Assignment 2 - Presentation",
+                "desc":"Canva slides used during graded presentation",
+                "pathName":"/files/CC0001/CC0001-T156-TeoKaiJie.pdf",
+                "tags":["Presentations"]
+            },
+            {
+                "moduleCode":"CC0001",
+                "fileName":"Assignment 2 - Presentation Script",
+                "desc":"Script used during graded presentation",
+                "pathName":"/files/CC0001/CC0001_Script.pdf",
+                "tags":["Presentations"]
+            },
+            {
+                "moduleCode":"CC0001",
+                "fileName":"Assignment 3 - Final Assignment",
+                "desc":"Final Assignment Op-Ed - Echoes of the Pioneers: Bukit Brown's Spirit in an Urbanising Singapore",
+                "pathName":"/files/CC0001/CC0001_Op_Ed_TeoKaiJie.pdf",
+                "tags":["Assignments"]
+            }
+        ]
+    },
+    "MH1812": {
+        "moduleName":"Discrete Mathematics",
+        "desc":"A foundational math course introducing key areas of discrete mathematics like number theory, logic, combinatorics, and graph theory. It emphasizes problem-solving and formal reasoning, and is tailored for first-year computer science and engineering students to build strong analytical skills.",
+        "grade":"A+",
+        "semester":2,
+        "year":2024,
+        "bgColor":"#CCFFCC",
+        "files":[
+            {
+                "moduleCode":"MH1812",
+                "fileName":"Anki Flashcards for Finals",
+                "desc":"A summary of all important concepts in Discete Mathematics (MH1812), using Anki flashcards!",
+                "pathName":"/files/MH1812/MH1812.csv",
+                "tags":["Anki"]
+            },
+            {
+                "moduleCode":"MH1812",
+                "fileName":"Additional Formulas Finals Cheatsheet",
+                "desc":"A cheatsheet that consists of additional formulas that might be useful for finals!",
+                "pathName":"/files/MH1812/Additional_Formulas_Finals_Cheatsheet.pdf",
+                "tags":["Cheatsheets","Notes"]
+            }
+        ]
+    },
+    "SC1005": {
+        "moduleName":"Digital Logic",
+        "desc":"An introductory course on digital circuit design and analysis, focusing on binary variables and logical functions. Students learn both theoretical principles and practical skills necessary for careers in ICT, including areas like computer architecture, digital systems, and microprocessors.",
+        "grade":"A+",
+        "semester":2,
+        "year":2024,
+        "bgColor":"#CCEEFF",
+        "files":[
+            {
+                "moduleCode":"SC1005",
+                "fileName":"Anki Flashcards for Finals",
+                "desc":"A summary of all important concepts in Digital Logic (SC1005), using Anki flashcards!",
+                "pathName":"/files/SC1005/SC1005.csv",
+                "tags":["Anki"]
+            }
+        ]
+    }
+}

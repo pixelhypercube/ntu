@@ -1,0 +1,83 @@
+Front	Back
+Propagation Delay	The time it takes for a signal to travel from the input to the output of a digital circuit.
+Carry Propagation	The process of transferring a carry bit from one stage to the next in multi-bit addition.
+Carry Look-ahead	A method of improving adder speed by computing carry signals in advance based on inputs.
+DC Noise Margin	The maximum noise voltage that a digital circuit can tolerate without changing logic levels.
+DC Fan Out	The maximum number of inputs that a single output can reliably drive in a digital circuit.
+Device A drives Device Y	"<div>Device A can reliably drive Device B <strong>if both of the following conditions are met</strong>:</div>
+<ol>
+<li>
+<div><strong>Voltage Compatibility</strong>:</div>
+<ul>
+<li>
+<div><span style=""background-color: rgb(70, 35, 0);"">VOH(A) ≥ VIH(B)</span> (A's output high is recognized as high by B)</div>
+</li>
+<li>
+<div><span style=""background-color: rgb(70, 35, 0);"">VOL(A) ≤ VIL(B)</span> (A's output low is recognized as low by B)</div>
+</li>
+</ul>
+</li>
+<li>
+<div><strong>Current Capability</strong>:</div>
+<ul>
+<li>
+<div><span style=""background-color: rgb(70, 35, 0);"">IOH(A) ≥ IIH(B)</span> (A can source enough current for B's high input)</div>
+</li>
+<li>
+<div><span style=""background-color: rgb(70, 35, 0);"">IOL(A) ≥ IIL(B)</span> (A can sink enough current for B's low input)</div>
+</li>
+</ul>
+</li>
+</ol>
+<div>If any of these are not met, A may <strong>fail to drive</strong> B correctly.</div>"
+SR Latch	A basic bistable circuit with Set (S) and Reset (R) inputs used for storing 1-bit data.
+Mealy FSM	A finite state machine where the output depends on both the current state and the input.
+Moore FSM	A finite state machine where the output depends only on the current state.
+"2&#x27;s complement multiplication"	Standard multiplication where the final result is corrected by negating the last partial product if needed (depending on sign extension method).
+Open-drain	An output configuration where the transistor pulls the line low, but needs an external pull-up resistor to go high.
+tr	Rise time – the time it takes for a signal to rise from a low to a high logic level.
+tf	Fall time – the time it takes for a signal to fall from a high to a low logic level.
+tPHL	Propagation delay from a high to a low output transition.
+tPLH	Propagation delay from a low to a high output transition.
+Schmitt-Trigger	A circuit with hysteresis that defines separate thresholds for rising and falling edges to clean up noisy signals.
+Parity Bit	Even/Odd Parity makes total no. of '1' bits even/odd <b>BEFORE</b> transmitting
+Consensus Property (Boolean Algebra)	AB + A'C + BC = AB + A'C
+Single Value Theorem	X + 1 = 1<br>X + 0 = X<br>X + X = X<br>X + X' = 1<br>(X')' = X<br><br>X * 0 = 0<br>X * 1 = X<br>X * X = X<br>X * X' = 0
+Half Adder	Comination Logic Circuit that performs addition of&nbsp;<b>2 bits</b>
+Full Adder	Combination Logic Citcuir that performs addition of&nbsp;<b>3 bits</b>
+Carry and sum formulas (Half Adder)	Carry = A * B<br>Sum = A ⊕ B
+Carry and Sum formulas (Full Adder)	Sum = A ⊕ B ⊕ Cin<br>Cout = A*B + B*Cin + A*Cin
+Signed-Magnitude	sign bit = MSB : 0 for +ve numbers, 1 for -ve numbers
+N-bit value range (Sign Magnitude)	-(2^(N-1) -1) to +(2^(N-1) -1)
+Sign Bit (2's Complement)	MSB = 0 for <b>ZERO</b>&nbsp;and +ve nums<br>1 for -ve nums
+N-Bit Range (2's Complement)	-(2^(N-1)) to +(2^(N-1) -1)
+VOH	"Minimum&nbsp;<span style=""background-color: rgb(0, 0, 255);""><b>output</b></span>&nbsp;voltage produced for logic <span style=""background-color: rgb(0, 0, 255);""><b>1</b></span>"
+VIH	"Minimum <b><span style=""background-color: rgb(0, 0, 255);"">input</span>&nbsp;</b>voltage to be recognized as logic <span style=""background-color: rgb(0, 0, 255);""><b>1</b></span>"
+VIL	"Maximum&nbsp;<span style=""background-color: rgb(0, 0, 255);""><b>input</b></span>&nbsp;voltage to be recognised as logic&nbsp;<span style=""background-color: rgb(0, 0, 255);""><b>0</b></span>"
+VOL	"Maximum&nbsp;<span style=""background-color: rgb(0, 0, 255);""><b>output</b></span>&nbsp;voltage produced for logic&nbsp;<span style=""background-color: rgb(0, 0, 255);""><b>0</b></span>"
+IIH	"Maximum current that flows into the <span style=""background-color: rgb(0, 0, 255);""><b>input</b></span> at logic <span style=""background-color: rgb(0, 0, 255);""><b>1</b></span>"
+IIL	"Maximum current that flows into the <span style=""background-color: rgb(0, 0, 255);""><b>input</b> </span>at logic <span style=""background-color: rgb(0, 0, 255);""><b>0</b></span>"
+IOH	"Maximum current that flows from the&nbsp;<b><span style=""background-color: rgb(0, 0, 255);"">output</span>&nbsp;</b>at logic&nbsp;<span style=""background-color: rgb(0, 0, 255);""><b>1</b></span>"
+IOL	"Maximum current that flows from the&nbsp;<span style=""background-color: rgb(0, 0, 255);""><b>output</b></span>&nbsp;at logic&nbsp;<span style=""background-color: rgb(0, 0, 255);""><b>0</b></span>"
+Power Dissipation	<b>P = C * V^2 * f<br></b>where<br>f - switching frequency<br>V - power suply voltage
+NMH	VOH(min) - VIH(min)
+NML	VOL(max)-VIL(max)
+High Impedance (High-Z)	- Neither 0 nor 1<br>- behaves like an open circuit
+Symbol for open drain	"<img src=""/files/SC1005/open_drain.png"">"
+Types of reset:	"<b>Asynchrnous</b>: whenever the reset input is asserted, the contents of the register are set to the reset value<br><b>Synchronous</b>: at a <span style=""color: rgb(170, 255, 255);"">rising edge</span>, if reset is asserted, the contents of the register are set to the reset value"
+Async reset	Whenever the reset input is asserted, the contents of the register are set to the reset value
+Synchronous Reset	"At a <span style=""color: rgb(170, 255, 255);"">rising edge</span>, if reset is asserted, the contents of the register are set to the reset value"
+Blocking Assignment Symbol	=
+Non-Blocking Assignment Symbol	&lt;=
+PISO (Verilog)	"<img src=""/files/SC1005/piso.png"">"
+SIPO (Verilog)	"<img src=""/files/SC1005/sipo.png"">"
+Memories	An array of storage elements
+Register	One storage element
+Characteristic of storage element	"Unique <span style=""color: rgb(170, 255, 255);"">address</span>"
+Parameter Declaration (VERILOG)	"module some_mod <span style=""background-color: rgb(0, 0, 255);""><b>#(parameter SIZE=8, WIDTH=16)</b></span>(<br>&nbsp;input [SIZE-1:0] X,Y,<br>&nbsp;output [WIDTH-1:0] Z<br>);"
+Parameters are constants that are	Local to a MODULE
+Reg	Signals you assign to from within an&nbsp;<b>always block</b><br>- Seen as a VARIABLE in programming
+Wire	Simply a&nbsp;<b>connection,</b>&nbsp;NO VALUE OF ITS OWN
+Frequency	inverse of period:<br>10ns period = 10 * 10^(-9) s, 1/10*10^(-9) = 10^8 Hz = 100 MHz
+Registers	Combining multiple D FLIP FLOPS together to store multible bits
+Correct form of concatenation	assign b = {a[3:0], 4'b0000}<br>assign c = {{<b>4{a[3]}</b>}, a[3:0]}
