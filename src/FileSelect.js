@@ -49,7 +49,7 @@ export default class FileSelect extends React.Component {
                                 tags={tags}
                                 desc={desc}
                                 innerHTML={innerHTML}
-                                pathName={"/#/FileViewer"+pathName}
+                                pathName={"/ntu/#/FileViewer"+pathName}
                                 />
                             )
                         }) : <></>}
