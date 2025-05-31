@@ -8,7 +8,7 @@ export default class FileSelect extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            moduleCode:window.location.pathname.substring(1)
+            moduleCode:window.location.pathname.substring(5)
         };
     }
     componentDidMount() {
@@ -49,7 +49,7 @@ export default class FileSelect extends React.Component {
                                 tags={tags}
                                 desc={desc}
                                 innerHTML={innerHTML}
-                                pathName={"/FileViewer"+pathName}
+                                pathName={"/ntu/FileViewer"+pathName}
                                 />
                             )
                         }) : <></>}
