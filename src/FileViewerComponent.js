@@ -17,6 +17,7 @@ export default class FileViewerComponent extends React.Component {
     };
 
     renderFile = (filePath, ext, innerHTML) => {
+        const {darkMode} = this.props;
         switch (ext) {
             case 'pdf':
                 return (
@@ -41,7 +42,7 @@ export default class FileViewerComponent extends React.Component {
             //         />
             //     );
             case 'csv':
-                return <AnkiCSVViewer filePath={"/ntu"+filePath} />
+                return <AnkiCSVViewer darkMode={darkMode} filePath={"/ntu"+filePath} />
             case 'mp4':
                 return <video src={"/ntu"+filePath} controls width="100%" />;
             case 'jpg':
@@ -62,19 +63,24 @@ export default class FileViewerComponent extends React.Component {
 
 
     render() {
-        const {fileName,filePath,innerHTML,moduleCode,desc} = this.props;
+        const {fileName,filePath,innerHTML,moduleCode,desc,darkMode} = this.props;
         const fileExt = filePath.split('.').pop().toLowerCase();
         const {showWarning} = this.state;
         return (
-            <Container>
+            <Container style={{minHeight:"800px"}}>
+                <br></br>
+                <h4>{moduleCode} - {fileName}</h4>
+                <p>{desc}</p>
+                {this.renderFile(filePath,fileExt,innerHTML)}
+                <hr></hr>
                 {/* Warning Message */}
                 {showWarning && (
                     <>
                         <br></br>
-                        <Alert variant="warning" style={{ maxWidth: "80%", margin: "auto" }}>
+                        <Alert className={darkMode ? "dark" : ""} variant="danger" style={{ maxWidth: "80%", margin: "auto" }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                 <h5 style={{ margin: 0 }}>⚠️ Heads up!</h5>
-                                <Button onClick={this.handleToggleWarning} variant="outline-dark">Close</Button>
+                                <Button onClick={this.handleToggleWarning} variant={"outline-"+(darkMode?"light":"dark")}>Close</Button>
                             </div>
                             <hr style={{ margin: "8px 0" }} />
                             I'm sharing this to give you a rough idea of what coursework at NTU might look like.<br/>
@@ -84,10 +90,6 @@ export default class FileViewerComponent extends React.Component {
                         </Alert>
                     </>
                 )}
-                <br></br>
-                <h4>{moduleCode} - {fileName}</h4>
-                <p>{desc}</p>
-                {this.renderFile(filePath,fileExt,innerHTML)}
             </Container>
         )
     }

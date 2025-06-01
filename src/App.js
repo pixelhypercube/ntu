@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import {
   HashRouter as Router,
   Routes,
@@ -9,7 +9,16 @@ import ModuleSelect from "./ModuleSelect";
 import FileSelect from "./FileSelect";
 import moduleInfo from "./moduleObj.json";
 import FileViewerComponent from "./FileViewerComponent";
+import { FaSun,FaMoon } from 'react-icons/fa';
 export default function App() {
+  const [darkMode,setDarkMode] = useState(false);
+
+  useEffect(()=>{
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setDarkMode(prefersDark);
+    console.log("App mounted. Dark mode set to", prefersDark);
+  },[])
+
   const modulesList = Object.keys(moduleInfo);
   let filesList = [];
   for (let module of modulesList) {
@@ -17,15 +26,16 @@ export default function App() {
     filesList.push(...files.flat());
   }
   return (
-    <>
-      <header>
-          <h2>Kendrick's NTU Collection</h2>
+    <div className={darkMode?"dark":""}>
+      <header className={darkMode?"dark":""}>
+        <div className={darkMode?"dark":""} id="toggle-light-dark" onClick={()=>{setDarkMode(!darkMode)}}>{darkMode ? <FaMoon style={{color:"white"}}></FaMoon> : <FaSun></FaSun>}</div>
+        <h2 className={darkMode?"dark":""}>Kendrick's NTU Collection</h2>
       </header>
       <Router>
         <Routes>
           <Route
             path="/"
-            element={<ModuleSelect/>}
+            element={<ModuleSelect darkMode={darkMode}/>}
           />
           {
             modulesList.map(moduleCode=>{
@@ -33,7 +43,7 @@ export default function App() {
                 <Route
                 key={moduleCode}
                 path={moduleCode}
-                element={<FileSelect/>}
+                element={<FileSelect darkMode={darkMode}/>}
                 />
               )
             })
@@ -45,6 +55,7 @@ export default function App() {
                 <Route
                   path={"/FileViewer" + pathName}
                   element={<FileViewerComponent 
+                  darkMode={darkMode}
                   moduleCode={moduleCode}
                   desc={desc} 
                   tags={tags}
@@ -57,6 +68,11 @@ export default function App() {
           }
         </Routes>
       </Router>
-    </>
+      <footer className={darkMode ? "dark" : ""}>
+          <div className="d-flex justify-content-center">
+              <p>Created by <a className={darkMode ? "dark" : ""} href="https://github.com/pixelhypercube" target="_blank" rel="noopener noreferrer">@pixelhypercube</a></p>
+          </div>
+      </footer>
+    </div>
   )
 }

@@ -14,8 +14,9 @@ export default class ModuleSelect extends React.Component {
 
   render() {
     const {modulesList} = this.state;
+    const {darkMode} = this.props;
     return (
-      <div>
+      <div style={{minHeight:"800px"}}>
         <main>
           <Container>
             <h2 className="mt-2">Select a Module!</h2>
@@ -24,11 +25,11 @@ export default class ModuleSelect extends React.Component {
               <Row>
                 {
                   modulesList.map((moduleCode)=>{
-                    const {moduleName,bgColor} = moduleInfo[moduleCode];
+                    const {moduleName,bgColor,bgColorDark} = moduleInfo[moduleCode];
                     return (
                       <Col key={moduleCode} xs={12} sm={6} md={4} lg={3}>
                         <ModuleButton
-                        bgColor={bgColor}
+                        bgColor={darkMode ? bgColorDark : bgColor}
                         onClick={()=>{
                             window.location.href = `/ntu/#/${moduleCode}`;
                         }}

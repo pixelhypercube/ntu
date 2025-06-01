@@ -9,7 +9,63 @@
   font-family: Rubik;
 }
 
+
 header {
-  padding:1%;
+  padding:20px;
   background:#CCCCCC;
+}
+
+.dark {
+  color:white;
+  background-color: #111111;
+}
+
+h1.dark,h2.dark,h3.dark,h4.dark,h5.dark,h6.dark {
+  background:rgba(0,0,0,0);
+}
+
+header.dark {
+  background:rgb(40, 40, 40);
+}
+
+#toggle-light-dark {
+  width:36px;
+  height:36px;
+  font-size:20px;
+  border:1px solid rgb(0, 0, 0);
+  border-radius:20px;
+}
+
+#toggle-light-dark.dark {
+  width:36px;
+  height:36px;
+  font-size:20px;
+  border:1px solid rgb(255, 255, 255);
+  border-radius:20px;
+}
+
+footer {
+  padding:2%;
+  margin-top: 2%;
+  background:rgb(177, 177, 177);
+}
+
+footer.dark {
+  background:rgb(40, 40, 40);
+}
+
+/* alert - warning */
+.alert-warning.dark {
+  --bs-alert-color: #fff3cd;         /* Light yellow text */
+  --bs-alert-bg: #664d03;            /* Dark amber/brownish background */
+  --bs-alert-border-color: #ffecb5;  /* Subtle yellow border */
+  --bs-alert-link-color: #fff3cd;    /* Light yellow link color */
+}
+
+/* alert - danger */
+.alert-danger.dark {
+  --bs-alert-color: #f8d7da; /* Light red text for better contrast */
+  --bs-alert-bg: #842029;   /* Dark red background */
+  --bs-alert-border-color: #f5c2c7; /* Subtle border color */
+  --bs-alert-link-color: #f8d7da; /* Light red link color */
 }

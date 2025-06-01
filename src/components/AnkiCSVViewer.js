@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import Papa from "papaparse";
 import renderMathInElement from "katex/contrib/auto-render";
 import "katex/dist/katex.min.css";
+import { Alert, Button } from "react-bootstrap";
+import "./AnkiCSVViewer.css";
 
 function AnkiCSVViewer(props) {
   const [cards, setCards] = useState([]);
@@ -60,7 +62,7 @@ function AnkiCSVViewer(props) {
             className="cursor-pointer text-xl min-h-[80px]"
             onClick={flipCard}
           >
-            <h5>{showBack ? "Answer" : "Concept"}</h5>
+            <h3>{showBack ? "Answer" : "Concept"}</h3>
             <hr></hr>
             <div 
             className="anki-card-content"
@@ -72,32 +74,35 @@ function AnkiCSVViewer(props) {
             }}
             />
           </div>
-          <button
-            className="mt-4 px-4 py-2 rounded"
+          <Button
+            className={"anki-btn mt-4 px-4 py-2 rounded"+(props.darkMode ? " dark" : "")}
             style={{marginRight:"5px"}}
             onClick={()=>deltaCard(-1)}
+            variant={"outline-"+(props.darkMode ? "light" : "dark")}
           >
             &larr;
-          </button>
-          <button
-            className="mt-4 px-4 py-2 rounded"
+          </Button>
+          <Button
+            className={"anki-btn mt-4 px-4 py-2 rounded"+(props.darkMode ? " dark" : "")}
             style={{marginLeft:"5px",marginRight:"5px"}}
             onClick={flipCard}
-          >Flip Card</button>
-          <button
-            className="mt-4 px-4 py-2 rounded"
+            variant={"outline-"+(props.darkMode ? "light" : "dark")}
+          >Flip Card</Button>
+          <Button
+            className={"anki-btn mt-4 px-4 py-2 rounded"+(props.darkMode ? " dark" : "")}
             style={{marginLeft:"5px"}}
             onClick={()=>deltaCard(1)}
+            variant={"outline-"+(props.darkMode ? "light" : "dark")}
           >
             &rarr;
-          </button>
+          </Button>
         </div>
       ) : (
         <p>Loading cards...</p>
       )}
-      <div className="bg-yellow-100 text-yellow-800 border border-yellow-300 rounded p-2 mb-4 text-sm">
+      <Alert variant="warning" className={props.darkMode ? "dark" : ""}>
         ⚠️ This is a <strong>beta version</strong> of the Anki card viewer. Features may be unstable or incomplete.
-      </div>
+      </Alert>
     </div>
   );
 }

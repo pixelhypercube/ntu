@@ -12,21 +12,23 @@ export default class FileSelect extends React.Component {
         };
     }
     componentDidMount() {
-        const {moduleName,grade,semester,year,bgColor,files,desc} = moduleInfo[this.state.moduleCode];
+        const {moduleName,grade,semester,year,bgColor,bgColorDark,files,desc} = moduleInfo[this.state.moduleCode];
         this.setState({
             moduleName,
             grade,
             semester,
             year,
             bgColor,
+            bgColorDark,
             files,
             desc
         });
     }
     render() {
-        const {moduleCode,moduleName,grade,year,semester,bgColor,files} = this.state;
+        const {moduleCode,moduleName,grade,year,semester,bgColor,bgColorDark,files} = this.state;
+        const {darkMode} = this.props;
         return (
-            <div>
+            <div style={{minHeight:"800px"}}>
                 <main>
                     <br></br>
                     <Container>
@@ -36,7 +38,7 @@ export default class FileSelect extends React.Component {
                             grade={grade}
                             year={year}
                             semester={semester}
-                            bgColor={bgColor}
+                            bgColor={darkMode ? bgColorDark : bgColor}
                             desc={this.state.desc}
                         />
                         <hr></hr>
@@ -44,6 +46,7 @@ export default class FileSelect extends React.Component {
                             const {fileName,pathName,tags,desc,innerHTML} = file;
                             return (
                                 <FileContainer
+                                darkMode={darkMode}
                                 key={fileName}
                                 fileName={fileName}
                                 tags={tags}

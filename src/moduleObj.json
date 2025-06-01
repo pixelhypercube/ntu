@@ -6,6 +6,7 @@
         "semester":1,
         "year":2024,
         "bgColor":"#FFCCCC",
+        "bgColorDark":"#663333",
         "files":[
             {
                 "moduleCode":"CC0005",
@@ -31,6 +32,7 @@
         "year":2024,
         "grade":"A",
         "bgColor":"#FFFFCC",
+        "bgColorDark":"#666633",
         "files":[
             {
                 "moduleCode":"CC0001",
@@ -62,6 +64,7 @@
         "semester":2,
         "year":2024,
         "bgColor":"#CCFFCC",
+        "bgColorDark":"#336633",
         "files":[
             {
                 "moduleCode":"MH1812",
@@ -86,6 +89,7 @@
         "semester":2,
         "year":2024,
         "bgColor":"#CCEEFF",
+        "bgColorDark":"#334455",
         "files":[
             {
                 "moduleCode":"SC1005",
@@ -93,6 +97,38 @@
                 "desc":"A summary of all important concepts in Digital Logic (SC1005), using Anki flashcards!",
                 "pathName":"/files/SC1005/SC1005.csv",
                 "tags":["Anki"]
+            },
+            {
+                "moduleCode":"SC1005",
+                "fileName":"2nd Part Notes",
+                "desc":"Mainly touches on combinational circuits, Verilog and Finite State Machines (FSM)",
+                "pathName":"/files/SC1005/SC1005_2ndPart.pdf",
+                "tags":["Notes"]
+            }
+        ]
+    },
+    "SC1008": {
+        "moduleName":"C & C++ Programming",
+        "desc":"This course introduces C and C++ programming, with a focus on system-level and performance-critical applications. It builds foundational skills for embedded systems (using C) and complex software development (using C++), such as in gaming engines, VR applications, web browsers, and blockchain tools. Complements earlier programming knowledge (e.g., Python in SC1003) by emphasizing speed, efficiency, and low-level control.",
+        "grade":"A-",
+        "semester":2,
+        "year":2024,
+        "bgColor":"#FFCCEE",
+        "bgColorDark":"#66334D",
+        "files":[
+            {
+                "moduleCode":"SC1008",
+                "fileName":"Common C Library Functions",
+                "desc":"Used in Lab 1 Quiz",
+                "pathName":"/files/SC1008/Common_C_Library_Functions.pdf",
+                "tags":["Cheatsheets","Notes"]
+            },
+            {
+                "moduleCode":"SC1008",
+                "fileName":"Additional C Cheatsheet",
+                "desc":"Contains some additional features of C",
+                "pathName":"/files/SC1008/Additional_C_Cheatsheet.pdf",
+                "tags":["Cheatsheets","Notes"]
             }
         ]
     }
